@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div id="home-screen" class="screen active">
+            <h1>Welcome to the Quiz!</h1>
+            <p style="text-align: center;">Test your knowledge with 20 random questions from our database of 100.</p>
+            <button id="start-btn" class="btn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="timer">
+                    <span id="time">30</span>s
+                </div>
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <div class="question-count">
+                    Question <span id="current-question">1</span>/20
+                </div>
+            </div>
+            
+            <div id="question-container">
+                <h2 id="question">Question will appear here</h2>
+                <div id="answer-buttons" class="btn-grid">
+                    <!-- Answer buttons will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <h1>Quiz Completed!</h1>
+            <div class="stats">
+                <p>Correct Answers: <span id="correct-answers">0</span></p>
+                <p>Incorrect Answers: <span id="incorrect-answers">0</span></p>
+                <p>Final Score: <span id="score">0</span>%</p>
+            </div>
+            <button id="restart-btn" class="btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
